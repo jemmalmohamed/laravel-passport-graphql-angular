@@ -1,0 +1,14 @@
+ <div class="row mt-5">
+   <div class="col-md-4 mb-3" *ngFor="let special of specials">
+     <div class="card text-center">
+       <div class="card-body">
+
+         <p class="card-text">{{special.comment}}</p>
+         <a href="#" class="btn btn-success">Buy Tickets</a>
+       </div>
+       <div class="card-footer text-muted">
+         {{special.name  }}
+       </div>
+     </div>
+   </div>
+ </div>

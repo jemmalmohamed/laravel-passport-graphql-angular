@@ -1,0 +1,18 @@
+type Event {
+    id: ID!
+    name: String!
+    comment:String
+}
+
+type Special {
+    id: ID!
+    name: String!
+    comment:String
+}
+
+
+extend type Query {
+    events: [Event] @all
+     specials: [Special] @all @middleware(checks:["auth:api"])
+    # specials: [Special] @all @protect(guards: ["api"])
+}
